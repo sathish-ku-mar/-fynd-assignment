@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'fynd_assignment.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_1ab3d7e877c4661',
-        'USER': 'b749ac3a8570e7',
-        'PASSWORD': '6c8a82eb',
-        'HOST': 'adffdadf2341:adf4234@us-cdbr-east.cleardb.com',   # Or an IP Address that your DB is hosted on
+        'NAME': 'cy5z3b10tgkkczk0',
+        'USER': 'gvyzp6379ti0qbxb',
+        'PASSWORD': 'aqs4c3vqfyxxdqnp',
+        'HOST': 'mgs0iaapcj3p9srz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
