@@ -84,12 +84,23 @@ WSGI_APPLICATION = 'fynd_assignment.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'fynd',
+#         'USER': 'djangouser',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fynd',
-        'USER': 'djangouser',
-        'PASSWORD': 'password',
+        'NAME': 'heroku_1ab3d7e877c4661',
+        'USER': 'b749ac3a8570e7',
+        'PASSWORD': '6c8a82eb',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
