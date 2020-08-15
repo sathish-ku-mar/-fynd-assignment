@@ -101,7 +101,7 @@ DATABASES = {
         'NAME': 'heroku_1ab3d7e877c4661',
         'USER': 'b749ac3a8570e7',
         'PASSWORD': '6c8a82eb',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'HOST': 'adffdadf2341:adf4234@us-cdbr-east.cleardb.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
