@@ -9,6 +9,7 @@ router.register(r'', MovieViewSet)
 
 
 urlpatterns = [
+    path(r'search/', MovieViewSet.as_view({'post': 'search'}), name='search'),
 ]
 
 urlpatterns += router.urls

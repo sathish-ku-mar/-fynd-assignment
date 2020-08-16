@@ -56,7 +56,7 @@ class MovieViewSet(viewsets.ViewSet):
                 for e in df.itertuples()
             ]
             self.model.objects.bulk_create(objs)
-            return Response({'msg':'Success'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'msg':'Success'}, status=200)
 
         # For create movie
         data = QueryDict.dict(request.data)
@@ -99,3 +99,16 @@ class MovieViewSet(viewsets.ViewSet):
         queryset.set_is_not_active()
 
         return Response({'message': 'Deleted'}, status=200)
+
+    def search(self, request):
+        """
+            To search the movies
+            URL Structure: /movie/search/
+            Required Fields: name
+        """
+        query_string = request.data.get('name', '')
+        if query_string:
+            queryset = self.model.search_movies(query_string)
+            serializer = self.serializer_class(queryset, many=True)
+            return Response(serializer.data)
+        return Response({'message': 'Movie name required'}, status=400)

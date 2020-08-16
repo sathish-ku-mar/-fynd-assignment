@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django_mysql.models import ListTextField
 from account.models import CommonModel
 # Create your models here.
@@ -40,3 +41,13 @@ class Movie(CommonModel):
         """
         self.is_active = False
         self.save(update_fields=['is_active'])
+
+    @classmethod
+    def search_movies(cls, query_string):
+        """
+        search all the movies by query_string
+        :param query_string: search string
+        :return: Movie objects
+        :rtype: django.db.models.query.QuerySet
+        """
+        return cls.objects.filter(name__icontains=query_string, is_active=True)
